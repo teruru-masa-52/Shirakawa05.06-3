@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>３組 二次会 出欠フォーム</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="overlay">
+    <!-- ページ2: 会員情報入力 -->
+    <div id="page2">
+      <h1>３組 二次会 出欠フォーム</h1>
+      <label>氏名:<br> 
+        <input type="text" id="name" class="input-name" placeholder="例: 白川太郎" required>
+      </label>
+      <button class="btn" onclick="goToPage3()">進む</button>
+      <div id="errorName" class="error"></div>
+    </div>
+
+    <!-- ページ3: 出欠・備考 -->
+    <div id="page3" class="hidden">
+      <h1>二次会の出欠</h1>
+      <label>出欠:<br>
+        <select id="attendance" class="select-small" required>
+          <option value="">-- 選択してください --</option>
+          <option value="出席">出席</option>
+          <option value="欠席">欠席</option>
+          <option value="未定">未定</option>
+        </select>
+      </label>
+      <label>備考欄:<br> 
+        <textarea id="note"></textarea>
+      </label>
+      <button class="btn" onclick="submitForm()">完了</button>
+      <div id="error2" class="error"></div>
+    </div>
+
+    <!-- ページ4: 完了画面 -->
+    <div id="page4" class="hidden">
+      <h1 id="thank-message">ご協力ありがとうございました</h1>
+    </div>
+  </div>
+
+  <!-- ロード中表示 -->
+  <div id="loading" class="hidden">ロード中...</div>
+
+  <script src="main.js"></script>
+</body>
+</html>
