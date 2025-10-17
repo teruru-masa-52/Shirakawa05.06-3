@@ -14,7 +14,7 @@ body {
 
 /* 中央のカード（フォーム） */
 .overlay {
-  background: rgba(255, 255, 255, 1); /* 少し白を強めて背景透過を抑える */
+  background: rgba(255, 255, 255, 1);
   padding: 28px;
   border-radius: 14px;
   box-shadow: 0 8px 30px rgba(0,0,0,0.15);
