@@ -9,7 +9,8 @@ body {
   align-items: center;
   min-height: 100vh;
   margin: 0;
-  padding: 20px; /* 余白を確保 */
+  padding: 20px;
+  /* 余白を確保 */
 }
 
 /* 中央のカード（フォーム） */
@@ -17,23 +18,38 @@ body {
   background: rgba(255, 255, 255, 1);
   padding: 28px;
   border-radius: 14px;
-  box-shadow: 0 8px 30px rgba(0,0,0,0.15);
-  width: 480px;        /* デスクトップでほどよいサイズ */
-  max-width: 100%;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+  width: 90%;
+  max-width: 480px;
   text-align: center;
 }
 
 /* 見出し */
-h1 { color: #333; margin-bottom: 12px; font-size: 20px; }
+h1 {
+  color: #333;
+  margin-bottom: 12px;
+  font-size: 20px;
+}
 
 /* イベント情報（必要なら） */
-.event-info { font-size: 14px; color: #444; margin-bottom: 12px; }
+.event-info {
+  font-size: 14px;
+  color: #444;
+  margin-bottom: 12px;
+}
 
 /* ラベル */
-label { display: block; margin: 12px 0; font-size: 15px; color: #222; }
+label {
+  display: block;
+  margin: 12px 0;
+  font-size: 15px;
+  color: #222;
+}
 
 /* 入力の基本スタイル */
-select, input, textarea {
+select,
+input,
+textarea {
   padding: 10px;
   margin-top: 8px;
   font-size: 16px;
@@ -44,9 +60,17 @@ select, input, textarea {
 }
 
 /* デフォルト幅（デスクトップ） */
-.select-small { width: 40%; }
-.input-name { width: 60%; }
-.input-contact { width: 65%; }
+.select-small {
+  width: 40%;
+}
+
+.input-name {
+  width: 60%;
+}
+
+.input-contact {
+  width: 65%;
+}
 
 /* テキストエリア */
 textarea {
@@ -69,38 +93,66 @@ textarea {
   cursor: pointer;
   transition: background 0.16s ease;
 }
-.btn:hover { background-color: #ff7744; }
-.btn-secondary { background-color: #999; margin-left: 10px; }
+
+.btn:hover {
+  background-color: #ff7744;
+}
+
+.btn-secondary {
+  background-color: #999;
+  margin-left: 10px;
+}
 
 /* エラーや無効スタイル */
-.hidden { display: none !important; }
-.error { color: #d02020; margin-top: 8px; font-size: 14px; }
-.invalid { background-color: #fff0f0; }
+.hidden {
+  display: none !important;
+}
+
+.error {
+  color: #d02020;
+  margin-top: 8px;
+  font-size: 14px;
+}
+
+.invalid {
+  background-color: #fff0f0;
+}
 
 /* ロード中オーバーレイ（全画面） */
 #loading {
-  position: fixed; top: 0; left: 0; right: 0; bottom: 0;
-  background: rgba(255,255,255,0.9);
-  display: flex; align-items: center; justify-content: center;
-  font-size: 18px; font-weight: 600; z-index: 9999;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: 600;
+  z-index: 9999;
 }
 
 /* ----------------
    スマホ向け（狭い画面でフォームを広く表示）
    ---------------- */
 @media (max-width: 600px) {
-  .overlay {
-    width: 94%;
-    padding: 20px;
-    border-radius: 12px;
+  h1 {
+    font-size: 20px;
   }
-  h1 { font-size: 18px; }
-  /* 入力欄をタッチしやすいようにフル幅に近づける */
-  .input-name, .select-small, .input-contact {
-    width: 92% !important;
-    font-size: 16px;
+
+  .input-name,
+  select,
+  textarea {
+    width: 100% !important;
+    font-size: 18px;
   }
-  textarea { width: 92%; min-height: 100px; font-size: 16px; }
-  .btn { width: 50%; font-size: 17px; padding: 12px; border-radius: 8px; }
-  .btn-secondary { width: 35%; margin-left: 6px; }
+
+  .btn {
+    width: 80%;
+    font-size: 18px;
+    padding: 14px;
+    border-radius: 10px;
+  }
 }
