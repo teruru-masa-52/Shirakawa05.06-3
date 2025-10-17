@@ -1,5 +1,4 @@
-/* style.css: 更新版（スマホでフォームが小さい問題の解消） */
-
+/* 全体のフォントと背景画像設定 */
 body {
   font-family: "Yu Gothic", sans-serif;
   background: url("https://www.illust-box.jp/db_img/sozai/00013/135955/watermark.jpg") no-repeat center center fixed;
@@ -10,17 +9,18 @@ body {
   min-height: 100vh;
   margin: 0;
   padding: 20px;
-  /* 余白を確保 */
 }
 
-/* 中央のカード（フォーム） */
+/* 中央の白いカード部分 */
 .overlay {
   background: rgba(255, 255, 255, 1);
   padding: 28px;
   border-radius: 14px;
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
   width: 90%;
+  /* 幅を画面に対して相対指定 */
   max-width: 480px;
+  /* デスクトップでは480px上限 */
   text-align: center;
 }
 
@@ -31,14 +31,7 @@ h1 {
   font-size: 20px;
 }
 
-/* イベント情報（必要なら） */
-.event-info {
-  font-size: 14px;
-  color: #444;
-  margin-bottom: 12px;
-}
-
-/* ラベル */
+/* ラベル（項目タイトル） */
 label {
   display: block;
   margin: 12px 0;
@@ -46,7 +39,7 @@ label {
   color: #222;
 }
 
-/* 入力の基本スタイル */
+/* 共通の入力要素スタイル */
 select,
 input,
 textarea {
@@ -59,20 +52,7 @@ textarea {
   outline: none;
 }
 
-/* デフォルト幅（デスクトップ） */
-.select-small {
-  width: 40%;
-}
-
-.input-name {
-  width: 60%;
-}
-
-.input-contact {
-  width: 65%;
-}
-
-/* テキストエリア */
+/* テキストエリア（備考欄） */
 textarea {
   width: 100%;
   padding: 10px;
@@ -81,7 +61,7 @@ textarea {
   min-height: 80px;
 }
 
-/* ボタン */
+/* ボタン共通デザイン */
 .btn {
   margin-top: 16px;
   padding: 12px 22px;
@@ -98,12 +78,7 @@ textarea {
   background-color: #ff7744;
 }
 
-.btn-secondary {
-  background-color: #999;
-  margin-left: 10px;
-}
-
-/* エラーや無効スタイル */
+/* エラー文や非表示設定 */
 .hidden {
   display: none !important;
 }
@@ -114,11 +89,7 @@ textarea {
   font-size: 14px;
 }
 
-.invalid {
-  background-color: #fff0f0;
-}
-
-/* ロード中オーバーレイ（全画面） */
+/* ロード中に出る画面全体の覆い */
 #loading {
   position: fixed;
   top: 0;
@@ -134,12 +105,16 @@ textarea {
   z-index: 9999;
 }
 
-/* ----------------
-   スマホ向け（狭い画面でフォームを広く表示）
-   ---------------- */
+/* スマホ画面向けのサイズ調整 */
 @media (max-width: 600px) {
+  .overlay {
+    width: 94%;
+    padding: 20px;
+    border-radius: 12px;
+  }
+
   h1 {
-    font-size: 20px;
+    font-size: 18px;
   }
 
   .input-name,
